@@ -1,4 +1,4 @@
-package com.sempro;
+package com.sempro.lecture_1;
 
 public class BinarySearch {
     public static boolean binarySearchRecursive(int search, int[] array, int start, int end) {

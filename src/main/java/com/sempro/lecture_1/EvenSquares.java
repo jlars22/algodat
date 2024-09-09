@@ -1,4 +1,4 @@
-package com.sempro;
+package com.sempro.lecture_1;
 
 public class EvenSquares {
     public static int evenSquares(int n) {
@@ -10,6 +10,5 @@ public class EvenSquares {
         int square = evenNumber * evenNumber;
 
         return square + evenSquares(n - 1);
-
     }
 }

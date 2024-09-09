@@ -1,4 +1,4 @@
-package com.sempro;
+package com.sempro.lecture_1;
 
 public class Linear {
     public static boolean linear(String s, char c, int l) {
