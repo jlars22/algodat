@@ -1,6 +1,4 @@
-package com.sempro.lecture_1;
-
-import java.util.Stack;
+package com.jonas.lecture_1;
 
 public class Fibonacci {
 

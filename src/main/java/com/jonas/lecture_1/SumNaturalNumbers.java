@@ -1,4 +1,4 @@
-package com.sempro.lecture_1;
+package com.jonas.lecture_1;
 
 public class SumNaturalNumbers {
     public static int sumNaturalNumbers(int n) {

@@ -1,4 +1,4 @@
-package com.sempro.lecture_1;
+package com.jonas.lecture_1;
 
 public class EvenSquares {
     public static int evenSquares(int n) {

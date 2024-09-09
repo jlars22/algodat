@@ -1,4 +1,4 @@
-package com.sempro.lecture_2.stack;
+package com.jonas.lecture_2.stack;
 
 @SuppressWarnings("unchecked")
 public class StackImplementation<T> implements Stack<T> {
