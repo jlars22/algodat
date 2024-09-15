@@ -1,5 +1,7 @@
 package com.jonas.lecture_2.stack;
 
+import java.util.Queue;
+
 public class BalanceParenthesis {
 
     public static boolean balPar(String text) {
