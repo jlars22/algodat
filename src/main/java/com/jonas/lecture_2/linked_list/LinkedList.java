@@ -1,27 +1,27 @@
 package com.jonas.lecture_2.linked_list;
 
-public class LinkedList {
+public class LinkedList<T> {
 
-    Node head;
+    Node<T> head;
 
-    static class Node {
-        int data;
-        Node next;
+    static class Node<T> {
+        T data;
+        Node<T> next;
 
-        Node(int d) {
+        Node(T d) {
             data = d;
             next = null;
         }
     }
 
-    public void insert(int data) {
-        Node newNode = new Node(data);
+    public void insert(T data) {
+        Node<T> newNode = new Node<>(data);
         newNode.next = null;
 
         if (head == null) {
             head = newNode;
         } else {
-            Node last = head;
+            Node<T> last = head;
             while (last.next != null) {
                 last = last.next;
             }
@@ -30,7 +30,7 @@ public class LinkedList {
     }
 
     public void printList() {
-        Node currNode = head;
+        Node<T> currNode = head;
         System.out.print("\nLinkedList: ");
         while (currNode != null) {
             System.out.print(currNode.data + " -> ");
@@ -39,21 +39,23 @@ public class LinkedList {
         System.out.println("null \n");
     }
 
-    public boolean deleteByKey(int key) {
-        Node currNode = head, prev = null;
+    public boolean deleteByKey(T key) {
+        Node<T> currNode = head, prev = null;
 
-        if (currNode != null && currNode.data == key) {
+        if (currNode != null && currNode.data.equals(key)) {
             head = currNode.next;
             return true;
         }
 
-        while (currNode != null && currNode.data != key) {
+        while (currNode != null && !currNode.data.equals(key)) {
             prev = currNode;
             currNode = currNode.next;
         }
 
         if (currNode != null) {
-            prev.next = currNode.next;
+            if (prev != null) {
+                prev.next = currNode.next;
+            }
             return true;
         }
 
@@ -61,7 +63,7 @@ public class LinkedList {
     }
 
     public boolean deleteAtPosition(int index) {
-        Node currNode = head, prev = null;
+        Node<T> currNode = head, prev = null;
 
         if (index == 0 && currNode != null) {
             head = currNode.next;
@@ -84,7 +86,7 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedList<Integer> list = new LinkedList<>();
 
         // Insert elements
         list.insert(1);
